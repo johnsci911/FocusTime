@@ -1,6 +1,7 @@
-import * as React from 'react'
+import React, { useState } from 'react';
 import {
   Text,
+  View,
   SafeAreaView,
   StyleSheet,
   Platform,
@@ -10,9 +11,17 @@ import { colors } from './src/utils/colors.js';
 import { Focus } from './src/features/focus.js';
 
 export default function App() {
+  const [currentSubject, setCurrentSubject] = useState(null);
+
   return (
     <SafeAreaView style={styles.container}>
-      <Focus></Focus>
+      {!currentSubject ? (
+        <Focus addSubject={setCurrentSubject} />
+      ) : (
+        <View>
+          <Text style={{ color: colors.white }}>I am going to render the {currentSubject}</Text>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
