@@ -15,15 +15,15 @@ export const RoundedButton = ({
   )
 }
 
-const styles = (size) => ({
+const styles = (size) => StyleSheet.create({
   radius: {
     borderRadius: size / 2,
     width: size,
     height: size,
     alignItems: 'center',
-    justifyContent: 'center',
-    borderColor: colors.white,
+    justifyContent: "center",
+    borderColor: "#fff",
     borderWidth: 2
   },
-  text: { color: colors.white, fontsize: size / 3 },
+  text: { color: '#fff', fontSize: size / 3 },
 });

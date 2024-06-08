@@ -7,20 +7,23 @@ import {
   Platform,
   StatusBar,
 } from 'react-native';
-import { colors } from './src/utils/colors.js';
-import { Focus } from './src/features/focus.js';
+import { colors } from './src/utils/colors';
+import { Focus } from './src/features/focus';
+import { Timer } from './src/components/timer';
 
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState(null);
+  const [currentSubject, setCurrentSubject] = useState('Test');
 
   return (
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
         <Focus addSubject={setCurrentSubject} />
       ) : (
-        <View>
-          <Text style={{ color: colors.white }}>I am going to render the {currentSubject}</Text>
-        </View>
+        <Timer
+          focusSubject={currentSubject}
+          onTimerEnd={() => {}}
+          clearSubject={() => {}}
+        />
       )}
     </SafeAreaView>
   );
