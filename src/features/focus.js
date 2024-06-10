@@ -19,7 +19,7 @@ export const Focus = ({ addSubject }) => {
           <RoundedButton
             style={styles.button}
             title="+"
-            size={50}
+            size={150}
             onPress={() => addSubject(subject)}
           ></RoundedButton>
         </View>

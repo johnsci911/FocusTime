@@ -12,7 +12,7 @@ import { Focus } from './src/features/focus';
 import { Timer } from './src/components/timer';
 
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState('Test');
+  const [currentSubject, setCurrentSubject] = useState('Test AAA');
 
   return (
     <SafeAreaView style={styles.container}>
