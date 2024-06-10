@@ -4,6 +4,7 @@ import { ProgressBar } from 'react-native-paper';
 import { Countdown } from '../components/Countdown';
 import { RoundedButton } from '../components/RoundedButton';
 import { Timing } from '../features/Timing';
+import { useKeepAwake } from 'expo-keep-awake';
 import { spacing } from '../utils/sizes';
 import { colors } from '../utils/colors';
 
@@ -18,6 +19,8 @@ const PATTERN = [
 ]
 
 export const Timer = ({ focusSubject, clearSubject }) => {
+  useKeepAwake();
+
   const [isStarted, setIsStarted] = useState(false);
   const [progress, setProgress] = useState(1);
   const [minutes, setMinutes] = useState(0.1);
@@ -27,6 +30,7 @@ export const Timer = ({ focusSubject, clearSubject }) => {
     setProgress(1)
     reset()
   }
+
   return (
     <View style={styles.container}>
       <View style={styles.countdown}>
