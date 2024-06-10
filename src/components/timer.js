@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Button, Vibration } from 'react-native';
 import { ProgressBar } from 'react-native-paper';
-import { Countdown } from '../components/countdown';
-import { RoundedButton } from '../components/roundedButton';
-import { Timing } from '../features/timing';
+import { Countdown } from '../components/Countdown';
+import { RoundedButton } from '../components/RoundedButton';
+import { Timing } from '../features/Timing';
 import { spacing } from '../utils/sizes';
 import { colors } from '../utils/colors';
 

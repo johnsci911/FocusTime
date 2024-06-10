@@ -22,8 +22,11 @@ const styles = (size) => StyleSheet.create({
     height: size,
     alignItems: 'center',
     justifyContent: "center",
-    borderColor: "#fff",
+    borderColor: colors.white,
     borderWidth: 2
   },
-  text: { color: '#fff', fontSize: size / 4 },
+  text: { 
+    color: colors.white, 
+    fontSize: size / 4 
+  },
 });

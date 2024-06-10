@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
-import { RoundedButton } from '../components/roundedButton';
+import { RoundedButton } from '../components/RoundedButton';
 import { sizes, spacing } from '../utils/sizes';
 
 export const Focus = ({ addSubject }) => {
