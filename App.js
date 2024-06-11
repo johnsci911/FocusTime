@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Text,
-  View,
   SafeAreaView,
   StyleSheet,
   Platform,
@@ -18,20 +16,23 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {!currentSubject ? (
-        <>
-        <Focus addSubject={setCurrentSubject} />
-        <FocusHistory history={history} />
-        </>
-      ) : (
-        <Timer
-          focusSubject={currentSubject}
-          onTimerEnd={(subject) => {
-            setHistory([...history, subject])
-          }}
-          clearSubject={() => setCurrentSubject(null)}
-        />
-      )}
+      {!currentSubject ? 
+        (
+          <>
+            <Focus addSubject={setCurrentSubject} />
+            <FocusHistory history={history} />
+          </>
+        ) 
+        : 
+        (
+          <Timer
+            focusSubject={currentSubject}
+            onTimerEnd={(subject) => {
+              setHistory([...history, subject])
+            }}
+            clearSubject={() => setCurrentSubject(null)}
+          />
+        )}
     </SafeAreaView>
   );
 }

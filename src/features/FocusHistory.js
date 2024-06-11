@@ -4,11 +4,13 @@ import { colors } from '../utils/colors';
 import { fontSizes, spacing } from '../utils/sizes';
 
 export const FocusHistory = ({ history }) => {
-  if (!history || !history.length) 
-    return 
+  if (! history || ! history.length) {
+    return (
       <View style={styles.container}>
         <Text style={styles.title}>We haven't focused on anything yet.</Text>
-      </View>;
+      </View>
+    )
+  }
 
   const renderItem = ({ item }) => <Text style={styles.item}>- {item}</Text>
 
