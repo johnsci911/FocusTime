@@ -5,8 +5,8 @@ import { RoundedButton } from '../components/RoundedButton';
 import { sizes, spacing } from '../utils/sizes';
 
 export const Focus = ({ addSubject }) => {
-  const [subject, setSubject] = useState(null);
-  console.log(subject);
+  const [subject, setSubject] = useState();
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -17,7 +17,6 @@ export const Focus = ({ addSubject }) => {
         />
         <View style={styles.button}>
           <RoundedButton
-            style={styles.button}
             title="+"
             size={50}
             onPress={() => addSubject(subject)}
@@ -33,6 +32,7 @@ const styles = StyleSheet.create({
   },
   button: {
     justifyContent: 'center',
+    paddingLeft: spacing.md,
   },
   textInput: {
     flex: 1,
